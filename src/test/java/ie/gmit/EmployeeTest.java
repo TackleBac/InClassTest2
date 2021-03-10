@@ -1,3 +1,10 @@
+/*
+Name: Ricky Small
+Email: G00352166@gmit.ie
+Date: 10/03/2021
+Title: Employee Class
+*/
+
 package ie.gmit;
 
 import org.junit.jupiter.api.BeforeEach;
