@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Employee.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">InClassTest2</a> &gt; <a href="index.source.html" class="el_package">ie.gmit</a> &gt; <span class="el_source">Employee.java</span></div><h1>Employee.java</h1><pre class="source lang-java linenums">package ie.gmit;
+
+public class Employee {
+	private String title;
+	private String name;
+	private String pps;
+	private String phone;
+	private String empType;
+	private int age;
+
+<span class="fc" id="L11">	public Employee(String title, String name, String pps, String phone, String empType, int age) {</span>
+<span class="fc" id="L12">		setTitle(title);</span>
+<span class="fc" id="L13">		setName(name);</span>
+<span class="fc" id="L14">		setPps(pps);</span>
+<span class="fc" id="L15">		setPhone(phone);</span>
+<span class="fc" id="L16">		setEmpType(empType);</span>
+<span class="fc" id="L17">		setAge(age);</span>
+<span class="fc" id="L18">	}</span>
+
+	public String getTitle() {
+<span class="fc" id="L21">		return title;</span>
+	}
+
+	public void setTitle(String title) {
+<span class="fc bfc" id="L25" title="All 6 branches covered.">		if(title.equals(&quot;Mr&quot;) || title.equals(&quot;Mrs&quot;) || title.equals(&quot;Miss&quot;) )</span>
+		{
+<span class="fc" id="L27">			this.title = title;</span>
+		}
+		else
+		{
+<span class="fc" id="L31">			throw new IllegalArgumentException(&quot;Invalid Title Error - Please choose Mr, Mrs or Miss&quot;);</span>
+		}
+<span class="fc" id="L33">	}</span>
+
+	public String getName() {
+<span class="fc" id="L36">		return name;</span>
+	}
+
+	public void setName(String name) {
+<span class="fc bfc" id="L40" title="All 4 branches covered.">		if(name.length() &gt;= 5 &amp;&amp;  name.length() &lt;= 22)</span>
+		{
+<span class="fc" id="L42">			this.name = name;</span>
+		}
+		else
+		{
+<span class="fc" id="L46">			throw new IllegalArgumentException(&quot;Invalid Name Error - Name must have more than 5 letters and a maximum of 22&quot;);</span>
+		}
+<span class="fc" id="L48">	}</span>
+
+	public String getPps() {
+<span class="fc" id="L51">		return pps;</span>
+	}
+
+	public void setPps(String pps) {
+<span class="fc bfc" id="L55" title="All 2 branches covered.">		if(pps.length() == 6)</span>
+		{
+<span class="fc" id="L57">			this.pps = pps;</span>
+		}
+		else
+		{
+<span class="fc" id="L61">			throw new IllegalArgumentException(&quot;Invalid Pps Number Error - Pps must be 6 digits&quot;);</span>
+		}
+<span class="fc" id="L63">	}</span>
+
+	public String getPhone() {
+<span class="fc" id="L66">		return phone;</span>
+	}
+
+	public void setPhone(String phone) {
+<span class="fc bfc" id="L70" title="All 2 branches covered.">		if(phone.length() == 7 )</span>
+		{
+<span class="fc" id="L72">			this.phone = phone;</span>
+		}
+		else
+		{
+<span class="fc" id="L76">			throw new IllegalArgumentException(&quot;Invalid Phone Number Error - Phone must be 7 digits&quot;);</span>
+		}
+<span class="fc" id="L78">	}</span>
+
+	public String getEmpType() {
+<span class="fc" id="L81">		return empType;</span>
+	}
+
+	public void setEmpType(String empType) {
+<span class="fc bfc" id="L85" title="All 4 branches covered.">		if(empType.equals(&quot;Full-time&quot;) || empType.equals(&quot;Part-time&quot;))</span>
+		{
+<span class="fc" id="L87">			this.empType = empType;</span>
+		}
+		else
+		{
+<span class="fc" id="L91">			throw new IllegalArgumentException(&quot;Invalid Employment Type Error - Enter Full-time or Part-time&quot;);</span>
+		}
+<span class="fc" id="L93">	}</span>
+
+	public int getAge() {
+<span class="fc" id="L96">		return age;</span>
+	}
+
+	public void setAge(int age) {
+<span class="fc bfc" id="L100" title="All 2 branches covered.">		if(age &gt;= 18)</span>
+		{
+<span class="fc" id="L102">			this.age = age;</span>
+		}
+		else
+		{
+<span class="fc" id="L106">			throw new IllegalArgumentException(&quot;Invalid Age Error - Must be over 18&quot;);</span>
+		}
+<span class="fc" id="L108">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
